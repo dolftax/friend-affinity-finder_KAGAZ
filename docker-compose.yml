@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  web:
+    image: php:apache
+    container_name: kagaz
+    volumes:
+      - ./webapp:/var/www/html/
+    ports:
+      - 8080:80
