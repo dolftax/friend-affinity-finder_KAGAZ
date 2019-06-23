@@ -1,8 +1,8 @@
  <?php
-$servername = "kagaz";
-$username = "root";
-$pass = "jassi";
-$dbname = "ibm_proj";
+$servername = "kagaz_mysql";
+$username = "messi";
+$pass = "messi";
+$dbname = "kagaz_db";
 
 
 $conn = new mysqli($servername, $username, $pass, $dbname);
