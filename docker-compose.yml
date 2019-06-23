@@ -5,6 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: kagaz
+    depends_on: 
+      - db
     volumes:
       - ./webapp:/var/www/html/
     ports:
@@ -19,5 +21,7 @@ services:
       MYSQL_DATABASE: kagaz_db
       MYSQL_USER: messi
       MYSQL_PASSWORD: messi
+    volumes: 
+      - ./data_dump_schema:/docker-entrypoint-initdb.d
     ports:
       - 6033:3306
