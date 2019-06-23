@@ -3,6 +3,7 @@
 install instructions:
 
 install docker
+
 install docker-compose
 
 cd into the project directory

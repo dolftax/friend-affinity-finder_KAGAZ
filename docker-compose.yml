@@ -1,9 +1,23 @@
 version: '3.3'
 services:
   web:
-    image: php:apache
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: kagaz
     volumes:
       - ./webapp:/var/www/html/
     ports:
       - 8080:80
+  db:
+    container_name: kagaz_mysql
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: kagaz_db
+      MYSQL_USER: messi
+      MYSQL_PASSWORD: messi
+    ports:
+      - 6033:3306
