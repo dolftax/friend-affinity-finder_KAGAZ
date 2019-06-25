@@ -7,8 +7,10 @@
 
         <?php
             $color = "red";
-            echo "My boat is " . $color. "<br>";
-            echo "My car is " . $COLOR. "<br>";
+    
+        ?>
+        <?php
+            
         ?>
     </body>
 </html>
