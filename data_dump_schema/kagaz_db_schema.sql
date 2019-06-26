@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.16, for Linux (x86_64)
 --
--- Host: localhost    Database: ibm_proj
+-- Host: localhost    Database: kagaz_db
 -- ------------------------------------------------------
 -- Server version	8.0.16
 
@@ -16,28 +16,37 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `login`
+-- Current Database: `kagaz_db`
 --
 
-DROP TABLE IF EXISTS `login`;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `kagaz_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+USE `kagaz_db`;
+
+--
+-- Table structure for table `kagaz_users`
+--
+
+DROP TABLE IF EXISTS `kagaz_users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `login` (
-  `sno` int(11) NOT NULL,
-  `uname` varchar(50) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`sno`)
+CREATE TABLE `kagaz_users` (
+  `sno` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  PRIMARY KEY (`sno`),
+  UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `login`
+-- Dumping data for table `kagaz_users`
 --
 
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+LOCK TABLES `kagaz_users` WRITE;
+/*!40000 ALTER TABLE `kagaz_users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `kagaz_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-23 17:16:35
+-- Dump completed on 2019-06-25 20:20:59
