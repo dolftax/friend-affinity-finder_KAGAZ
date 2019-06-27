@@ -1,0 +1,72 @@
+/* definitions */
+h1,
+h2,
+.fat, nav .brand-logo {
+  font-family: 'Abril Fatface', serif;
+}
+
+h3,
+h4,
+h5,
+h6,
+.slim,
+.subheader, nav ul a {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}h1
+
+/h1 */
+/h1ents and classes*/
+nh1and-logo {
+ h1: #333;
+}h1
+
+nav ul a {
+  color: #333;
+}
+
+p {
+  line-height: 2;
+}
+
+.button-collapse {
+  color: orange;
+}
+
+.parallax-container {
+  min-height: 360px;
+  line-height: 0;
+  height: auto;
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.page-footer {
+  margin: 0;
+}
