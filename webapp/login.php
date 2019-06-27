@@ -18,6 +18,7 @@
             $password = $_POST["password"];
             if(authUser($email,$password) == TRUE){
                 echo "<h1>"."logged in"."</h1>";
+                echo sprintf("<script type=\"text/javascript\">location.href = '%s';</script>","https://www.google.com/");
             }
             else{
                 echo "<h1>"."wrong credentials"."</h1>";

@@ -31,7 +31,7 @@
         if ($conn->connect_error) {
             die("Connection failed: ". $conn->connect_error);
         }
-        echo $sql = sprintf("select * from kagaz_users where email = '%s' AND password = '%s'",$email,$password_arg);
+        $sql = sprintf("select * from kagaz_users where email = '%s' AND password = '%s'",$email,$password_arg);
         $result = $conn->query($sql);
         if($result->num_rows == 0){
             return FALSE;

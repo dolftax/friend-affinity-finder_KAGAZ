@@ -31,7 +31,7 @@
         <div class="sct login">
             <form action="login.php" method="POST">
                 <h3>kagaz login</h3>
-                <input type="email" name="email" placeholder="Email" value = "<?php echo $email ?>">
+                <input type="email" name="email" placeholder="Email" value = "xx">
                 <input type="password" name="password" placeholder="Password">
                 <input type="submit" name="login" value="login">
                 <input type="button" name="signup" value="signup" onclick ="window.location.href = 'signup.php';" >
