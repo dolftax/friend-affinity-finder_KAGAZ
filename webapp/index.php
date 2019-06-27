@@ -29,20 +29,10 @@
     <div class="wrapper">
         <div class="sct brand"><h3>YOUR LOGO</h3></div>
         <div class="sct login">
-            <form>
+            <form action="login.php" method="POST">
                 <h3>kagaz login</h3>
-                <input type="email" name="email" placeholder="Email">
+                <input type="email" name="email" placeholder="Email" value = "<?php echo $email ?>">
                 <input type="password" name="password" placeholder="Password">
-                <div class="forgot-remember">
-                        <label class="control control-checkbox">
-                                Remember me
-                                    <input type="checkbox" />
-                                <div class="control_indicator"></div>
-                            </label>
-                    <div class="forgot">
-                            <a href="#">Forgot Password?</a>
-                    </div> 
-                </div>
                 <input type="submit" name="login" value="login">
                 <input type="button" name="signup" value="signup" onclick ="window.location.href = 'signup.php';" >
             </form>

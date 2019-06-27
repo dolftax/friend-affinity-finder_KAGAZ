@@ -26,7 +26,7 @@
 <body>
 
         <?php include("dbactions.php"); ?>
-        <?php include("authenticate.php"); ?>
+        <?php include("validate.php"); ?>
 
         <div class="sct login">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
