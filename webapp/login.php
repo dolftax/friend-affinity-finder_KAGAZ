@@ -18,10 +18,14 @@
             $password = $_POST["password"];
             if(authUser($email,$password) == TRUE){
                 echo "<h1>"."logged in"."</h1>";
-                echo sprintf("<script type=\"text/javascript\">location.href = '%s';</script>","https://www.google.com/");
+                $name = mappedQuery($email,"name");
+                echo sprintf("<script type=\"text/javascript\">var name = '%s';</script>",$name);
+                echo sprintf("<script type=\"text/javascript\">var email = '%s';</script>",$email);
+                echo sprintf("<script type=\"text/javascript\">location.href = '%s';</script>","./userHome.php");
             }
             else{
                 echo "<h1>"."wrong credentials"."</h1>";
+                echo sprintf("<script type=\"text/javascript\">location.href = '%s';</script>","./login_page.php");
             }   
         ?>
     </body>

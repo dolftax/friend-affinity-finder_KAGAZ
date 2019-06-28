@@ -15,6 +15,7 @@
         if ($conn->connect_error) {
             die("Connection failed: ". $conn->connect_error);
         }
+        
         echo "<br>" . "Connected sucessfully" . "<br>";
         $result = $conn->query("use kagaz_db");
         // echo $result[0];
