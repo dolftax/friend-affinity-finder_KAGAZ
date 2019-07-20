@@ -9,6 +9,6 @@ install docker-compose
 cd into the project directory
 
 execute:
-    docker-compose up
+    'docker-compose up'
 the kagaz app should now be running at:
     http://localhost:8080/
