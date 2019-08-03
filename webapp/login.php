@@ -21,7 +21,7 @@
                 $name = mappedQuery($email,"name");
                 echo sprintf("<script type=\"text/javascript\">var name = '%s';</script>",$name);
                 echo sprintf("<script type=\"text/javascript\">var email = '%s';</script>",$email);
-                echo sprintf("<script type=\"text/javascript\">location.href = '%s';</script>","./userHome.php");
+                echo sprintf("<script type=\"text/javascript\">location.href = '%s';</script>","./userHome.html");
             }
             else{
                 echo "<h1>"."wrong credentials"."</h1>";
